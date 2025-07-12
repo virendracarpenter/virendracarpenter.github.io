@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virendra Carpenter - CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfdfd; color: #333; padding: 2rem; }
+    .cv-section { margin-bottom: 2rem; }
+    .section-title { border-bottom: 2px solid #003399; color: #003399; margin-bottom: 1rem; padding-bottom: 0.25rem; font-size: 1.3rem; text-transform: uppercase; }
+    .contact-info a { text-decoration: none; color: #003399; }
+    .project-title a { text-decoration: none; color: #003399; font-weight: bold; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.5rem; }
+    .subtext { font-size: 0.9rem; color: #666; }
+    .skill-tag { display: inline-block; background: #003399; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; margin: 0.2rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Virendra Carpenter</h1>
+    <p class="text-center contact-info">
+      📞 +91 7724855355 | ✉️ <a href="mailto:virendracarpenter28@gmail.com">virendracarpenter28@gmail.com</a> | 🌐 <a href="https://vcarp.vercel.app">vcarp.vercel.app</a><br>
+      <a href="https://linkedin.com/in/virendracarpenter"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+      <a href="https://github.com/virendracarpenter"><i class="fab fa-github"></i> GitHub</a> |
+      <a href="https://leetcode.com/vcarp"><i class="fas fa-laptop-code"></i> LeetCode</a> |
+      <a href="https://twitter.com/veecarpenter"><i class="fab fa-twitter"></i> Twitter</a>
+      <br>📍 Indore, India
+    </p>
+
+    <div class="cv-section">
+      <div class="section-title">Objective</div>
+      <p>Python Developer with 2.5+ years experience in building scalable applications with FastAPI, Django, REST APIs and Cloud technologies. Committed to delivering high-quality, efficient software solutions.</p>
+    </div>
+
+    <div class="cv-section">
+      <div class="section-title">Skills</div>
+      <p><strong>Languages:</strong> Python, JavaScript, SQL, HTML, CSS, Bash</p>
+      <p><strong>Frameworks:</strong> Django, DRF, FastAPI, Flask, Alembic, Celery, Redis, Wagtail, WebSockets, Bootstrap, Ajax, jQuery, OpenAI API</p>
+      <p><strong>Architecture:</strong> Microservices, Modular Monoliths, REST APIs, JWT Auth, RBAC</p>
+      <p><strong>Databases:</strong> DynamoDB, PostgreSQL, SQLite, MySQL, MongoDB</p>
+      <p><strong>Cloud/DevOps:</strong> AWS (EC2, S3, Lambda...), GitHub Actions, Jenkins, Docker, Nginx</p>
+      <p><strong>Tools:</strong> PyCharm, VSCode, Postman, Shell Scripting, Zoho CRM, Black, Flake8</p>
+    </div>
+
+    <div class="cv-section">
+      <div class="section-title">Professional Experience</div>
+      <ul>
+        <li><strong>Software Engineer, JIT Inspire (P) Ltd</strong> <span class="subtext">(Jan 2025 - Present, Indore)</span>
+          <ul>
+            <li>Engineered scalable backend services powering multi-tenant, high-volume applications.</li>
+            <li>Built serverless architectures with AWS Lambda, Step Functions, and DynamoDB, ensuring cost-effective scaling.</li>
+            <li>Led integration of CI/CD pipelines (GitHub Actions, AWS CodePipeline) to streamline deployments across environments.</li>
+            <li>Mentored engineers on system design, performance optimization, and cloud-native best practices.</li>
+            <li>Documented system blueprints and contributed to architectural decisions in sprint reviews.</li>
+          </ul>
+        </li>
+        <li><strong>Software Engineer, Cyber Infrastructure (P) Ltd</strong> <span class="subtext">(April 2023 - Jan 2025, Indore)</span>
+          <ul>
+            <li>Designed and implemented scalable system architectures for multiple projects.</li>
+            <li>Developed backend functionalities using Python, Django, and DRF, integrating trading algorithms and automated quiz generation.</li>
+            <li>Deployed and managed applications on AWS using Docker for containerization and CI/CD workflows.</li>
+            <li>Analyzed client requirements, conducted research and development, and collaborated on feature delivery and optimization.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cv-section">
+      <div class="section-title">Projects</div>
+      <ul>
+        <li><strong><a href="https://fibonaccipartner.com">FibonacciPartner</a></strong>: Serverless AI marketing platform using Flask, AWS Lambda, Step Functions, S3, Batch Jobs, OpenAI, and Cognito.
+          <ul>
+            <li>Designed a modular architecture managing 30+ AWS Lambdas and batch jobs via Serverless Framework.</li>
+            <li>Built OpenCV/FFMPEG pipelines for video generation; integrated OpenAI, Google Ads, Meta APIs for creatives & analytics.</li>
+            <li>Auth, database, and pipelines automated using IaC; reduced server costs and deployment times.</li>
+          </ul>
+        </li>
+        <li><strong>Micron</strong>: FastAPI-based attendance & team management with PostgreSQL, Ltree, AWS S3, and CSV automation.
+          <ul>
+            <li>Enabled hierarchical teams, RBAC, AWS S3 for file attachments, and Lambda-triggered CSV upserts.</li>
+            <li>Used Ltree for recursive access filtering; separated service/business logic for maintainability.</li>
+          </ul>
+        </li>
+        <li><strong><a href="https://hands-free.trading">Hands-Free Trading</a></strong>: Microservices trading platform using Django, Kafka, Celery, Docker, WebSockets.
+          <ul>
+            <li>Developed REST APIs, integrated broker platforms, implemented Celery caching, JWT auth, payments, and notifications.</li>
+            <li>CI/CD pipelines and AWS ECR/ECS setup ensured scalability and performance gains (30% improvement).</li>
+          </ul>
+        </li>
+        <li><strong><a href="https://thestarlight.org">Starlight</a></strong>: Full-stack quiz system with OpenAI, Rasa chatbot, Django backend.
+          <ul>
+            <li>Supported MCQs, equations, formulas, and PDF-based auto generation using OpenAI.</li>
+            <li>Used Rasa chatbot for quiz delivery and included gamified features (Dino game).</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cv-section">
+      <div class="section-title">Education</div>
+      <ul>
+        <li><strong>B.Tech, Computer Science and Engineering</strong><br>
+          IPS Academy, Indore (2019 - 2023)<br>
+          CGPA: 8.61 / 10
+        </li>
+      </ul>
+    </div>
+
+    <div class="cv-section">
+      <div class="section-title">Additional Information</div>
+      <p><strong>Languages:</strong> English, Hindi</p>
+      <p><strong>Interests:</strong> Technology Trends, Customizing Systems, Sketching</p>
+    </div>
+
+  </div>
+</body>
+</html>
