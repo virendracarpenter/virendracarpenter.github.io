@@ -1,120 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virendra Carpenter - CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Virendra Carpenter | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfdfd; color: #333; padding: 2rem; }
-    .cv-section { margin-bottom: 2rem; }
-    .section-title { border-bottom: 2px solid #003399; color: #003399; margin-bottom: 1rem; padding-bottom: 0.25rem; font-size: 1.3rem; text-transform: uppercase; }
-    .contact-info a { text-decoration: none; color: #003399; }
-    .project-title a { text-decoration: none; color: #003399; font-weight: bold; }
-    ul { padding-left: 1.2rem; }
-    li { margin-bottom: 0.5rem; }
-    .subtext { font-size: 0.9rem; color: #666; }
-    .skill-tag { display: inline-block; background: #003399; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; margin: 0.2rem; font-size: 0.9rem; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      font-family: 'Fira Code', monospace;
+      color: #d1d1d1;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.2rem;
+      background: linear-gradient(to right, #00f0ff, #00ff87);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 255, 195, 0.2);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #bbb;
+      margin-top: 0.3rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffbb;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 1rem;
+      border: 1px solid #00ffbb55;
+      border-radius: 5px;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: #00ffbb22;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      font-family: 'Orbitron', sans-serif;
+      border-bottom: 2px solid #00ffbb;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      color: #00ffbb;
+    }
+
+    .section p,
+    .section li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li::before {
+      content: '▸';
+      color: #00ffbb;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, #161616, #1c1c1c);
+      border: 1px solid #1f1f1f;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 195, 0.08);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 195, 0.2);
+    }
+
+    .project-card h3 {
+      color: #00ffbb;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card a {
+      font-size: 0.9rem;
+      color: #8af7ff;
+      text-decoration: none;
+    }
+
+    .experience-item {
+      background: #151515;
+      border: 1px solid #222;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 6px rgba(0, 255, 195, 0.08);
+    }
+
+    .experience-item h3 {
+      color: #00ffbb;
+      margin-bottom: 0.4rem;
+    }
+
+    .experience-item ul li::before {
+      content: '▹';
+      color: #00ffbb;
+    }
+
+    .footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1 class="text-center">Virendra Carpenter</h1>
-    <p class="text-center contact-info">
-      📞 +91 7724855355 | ✉️ <a href="mailto:virendracarpenter28@gmail.com">virendracarpenter28@gmail.com</a> | 🌐 <a href="https://vcarp.vercel.app">vcarp.vercel.app</a><br>
-      <a href="https://linkedin.com/in/virendracarpenter"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-      <a href="https://github.com/virendracarpenter"><i class="fab fa-github"></i> GitHub</a> |
-      <a href="https://leetcode.com/vcarp"><i class="fas fa-laptop-code"></i> LeetCode</a> |
-      <a href="https://twitter.com/veecarpenter"><i class="fab fa-twitter"></i> Twitter</a>
-      <br>📍 Indore, India
-    </p>
+  <header>
+    <h1>Virendra Carpenter</h1>
+    <p>Backend Developer | Cloud-Native Architect | Python Specialist</p>
+    <nav>
+      <a href="mailto:virendracarpenter28@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/virendracarpenter" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/virendracarpenter" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://vcarp.vercel.app" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+      <a href="https://leetcode.com/vcarp" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
+      <a href="https://twitter.com/veecarpenter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    </nav>
+  </header>
 
-    <div class="cv-section">
-      <div class="section-title">Objective</div>
-      <p>Python Developer with 2.5+ years experience in building scalable applications with FastAPI, Django, REST APIs and Cloud technologies. Committed to delivering high-quality, efficient software solutions.</p>
+  <section class="section">
+    <h2>About Me</h2>
+    <p>Passionate <strong style="color:#00ffbb">Python Developer</strong> with 2.5+ years of experience building scalable backend systems, serverless pipelines, and modern cloud-native platforms using FastAPI, Django, AWS, and DevOps tooling.</p>
+  </section>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: Python, JavaScript, SQL, Bash, HTML, CSS</li>
+      <li>Frameworks: FastAPI, Django, DRF, Flask, Celery, Wagtail, Pydantic, SQLAlchemy, Alembic, Bootstrap, jQuery</li>
+      <li>Cloud & DevOps: AWS (Lambda, S3, RDS, ECS, Cognito, Route 53), Docker, Serverless, CI/CD (GitHub Actions, Jenkins), Nginx</li>
+      <li>Databases: PostgreSQL, DynamoDB, SQLite, MySQL, MongoDB</li>
+      <li>Tools: Git, GitHub, GitLab, Postman, OpenAI API, pgAdmin, Shell Scripting, CSV Automation</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="project-card">
+        <h3>FibonacciPartner</h3>
+        <p>Serverless AI-powered ad automation platform with 30+ AWS Lambdas, OpenCV video generation, and third-party ad APIs (Meta, Google, TikTok).</p>
+        <p><strong>Tech Stack:</strong> Flask, AWS Lambda, DynamoDB, S3, Step Functions, Docker, Serverless Framework, Cognito, CloudWatch, OpenAI API</p>
+        <a href="https://fibonaccipartner.com" target="_blank">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>Micron</h3>
+        <p>Multi-tenant FastAPI platform for team hierarchy, RBAC, attendance logs, file attachments, and real-time CSV ingestion via AWS Lambda.</p>
+        <p><strong>Tech Stack:</strong> FastAPI, PostgreSQL, SQLAlchemy, Pydantic, Alembic, Docker, AWS S3, Lambda</p>
+      </div>
+      <div class="project-card">
+        <h3>Hands-Free Trading</h3>
+        <p>Microservices-based cloud trading app with broker integration, WebSocket signals, Celery tasks, and fully containerized AWS ECS deployment.</p>
+        <p><strong>Tech Stack:</strong> Django, DRF, Kafka, React, WebSockets, Celery, PostgreSQL, AWS ECS, RDS, S3, Docker</p>
+        <a href="https://hands-free.trading" target="_blank">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>Starlight</h3>
+        <p>Quiz system with question types (MCQ, formula), AI generation from PDFs using OpenAI, bulk upload via Google Sheets, and gamified chatbot using Rasa.</p>
+        <p><strong>Tech Stack:</strong> Django, PostgreSQL, GCP, OpenAI API, Rasa, Bootstrap, Ajax</p>
+        <a href="https://thestarlight.org" target="_blank">Visit →</a>
+      </div>
     </div>
+  </section>
 
-    <div class="cv-section">
-      <div class="section-title">Skills</div>
-      <p><strong>Languages:</strong> Python, JavaScript, SQL, HTML, CSS, Bash</p>
-      <p><strong>Frameworks:</strong> Django, DRF, FastAPI, Flask, Alembic, Celery, Redis, Wagtail, WebSockets, Bootstrap, Ajax, jQuery, OpenAI API</p>
-      <p><strong>Architecture:</strong> Microservices, Modular Monoliths, REST APIs, JWT Auth, RBAC</p>
-      <p><strong>Databases:</strong> DynamoDB, PostgreSQL, SQLite, MySQL, MongoDB</p>
-      <p><strong>Cloud/DevOps:</strong> AWS (EC2, S3, Lambda...), GitHub Actions, Jenkins, Docker, Nginx</p>
-      <p><strong>Tools:</strong> PyCharm, VSCode, Postman, Shell Scripting, Zoho CRM, Black, Flake8</p>
-    </div>
-
-    <div class="cv-section">
-      <div class="section-title">Professional Experience</div>
+  <section class="section">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>JIT Inspire (Jan 2025 – Present)</h3>
       <ul>
-        <li><strong>Software Engineer, JIT Inspire (P) Ltd</strong> <span class="subtext">(Jan 2025 - Present, Indore)</span>
-          <ul>
-            <li>Engineered scalable backend services powering multi-tenant, high-volume applications.</li>
-            <li>Built serverless architectures with AWS Lambda, Step Functions, and DynamoDB, ensuring cost-effective scaling.</li>
-            <li>Led integration of CI/CD pipelines (GitHub Actions, AWS CodePipeline) to streamline deployments across environments.</li>
-            <li>Mentored engineers on system design, performance optimization, and cloud-native best practices.</li>
-            <li>Documented system blueprints and contributed to architectural decisions in sprint reviews.</li>
-          </ul>
-        </li>
-        <li><strong>Software Engineer, Cyber Infrastructure (P) Ltd</strong> <span class="subtext">(April 2023 - Jan 2025, Indore)</span>
-          <ul>
-            <li>Designed and implemented scalable system architectures for multiple projects.</li>
-            <li>Developed backend functionalities using Python, Django, and DRF, integrating trading algorithms and automated quiz generation.</li>
-            <li>Deployed and managed applications on AWS using Docker for containerization and CI/CD workflows.</li>
-            <li>Analyzed client requirements, conducted research and development, and collaborated on feature delivery and optimization.</li>
-          </ul>
-        </li>
+        <li>Built scalable backend services and serverless pipelines using AWS Lambda and Step Functions.</li>
+        <li>Integrated CI/CD with GitHub Actions and AWS CodePipeline to streamline deployments.</li>
+        <li>Led system architecture meetings and mentored junior developers on best practices.</li>
+        <li>Developed reusable Python Lambda layers and documented system designs for scale.</li>
       </ul>
     </div>
-
-    <div class="cv-section">
-      <div class="section-title">Projects</div>
+    <div class="experience-item">
+      <h3>Cyber Infrastructure (Apr 2023 – Jan 2025)</h3>
       <ul>
-        <li><strong><a href="https://fibonaccipartner.com">FibonacciPartner</a></strong>: Serverless AI marketing platform using Flask, AWS Lambda, Step Functions, S3, Batch Jobs, OpenAI, and Cognito.
-          <ul>
-            <li>Designed a modular architecture managing 30+ AWS Lambdas and batch jobs via Serverless Framework.</li>
-            <li>Built OpenCV/FFMPEG pipelines for video generation; integrated OpenAI, Google Ads, Meta APIs for creatives & analytics.</li>
-            <li>Auth, database, and pipelines automated using IaC; reduced server costs and deployment times.</li>
-          </ul>
-        </li>
-        <li><strong>Micron</strong>: FastAPI-based attendance & team management with PostgreSQL, Ltree, AWS S3, and CSV automation.
-          <ul>
-            <li>Enabled hierarchical teams, RBAC, AWS S3 for file attachments, and Lambda-triggered CSV upserts.</li>
-            <li>Used Ltree for recursive access filtering; separated service/business logic for maintainability.</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://hands-free.trading">Hands-Free Trading</a></strong>: Microservices trading platform using Django, Kafka, Celery, Docker, WebSockets.
-          <ul>
-            <li>Developed REST APIs, integrated broker platforms, implemented Celery caching, JWT auth, payments, and notifications.</li>
-            <li>CI/CD pipelines and AWS ECR/ECS setup ensured scalability and performance gains (30% improvement).</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://thestarlight.org">Starlight</a></strong>: Full-stack quiz system with OpenAI, Rasa chatbot, Django backend.
-          <ul>
-            <li>Supported MCQs, equations, formulas, and PDF-based auto generation using OpenAI.</li>
-            <li>Used Rasa chatbot for quiz delivery and included gamified features (Dino game).</li>
-          </ul>
-        </li>
+        <li>Designed scalable backends for trading and AI-based quiz platforms using Django and DRF.</li>
+        <li>Implemented Docker-based deployment with AWS EC2, S3, and CI/CD integration.</li>
+        <li>Led backend modules for algorithmic trading, auto quiz generation, and chatbot integration.</li>
+        <li>Documented client requirements and collaborated across departments to deliver successful products.</li>
       </ul>
     </div>
+  </section>
 
-    <div class="cv-section">
-      <div class="section-title">Education</div>
-      <ul>
-        <li><strong>B.Tech, Computer Science and Engineering</strong><br>
-          IPS Academy, Indore (2019 - 2023)<br>
-          CGPA: 8.61 / 10
-        </li>
-      </ul>
-    </div>
+  <section class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech – Computer Science</strong>, IPS Academy Indore (2019–2023) – CGPA: 8.61</li>
+    </ul>
+  </section>
 
-    <div class="cv-section">
-      <div class="section-title">Additional Information</div>
-      <p><strong>Languages:</strong> English, Hindi</p>
-      <p><strong>Interests:</strong> Technology Trends, Customizing Systems, Sketching</p>
-    </div>
+  <section class="section">
+    <h2>Extras</h2>
+    <ul>
+      <li>Languages: English, Hindi</li>
+      <li>Hobbies: Linux Customization, AI Tools, Sketching</li>
+    </ul>
+  </section>
 
-  </div>
+  <footer class="footer">
+    &copy; 2025 Virendra Carpenter — Engineered with passion 💡
+  </footer>
 </body>
+
 </html>
